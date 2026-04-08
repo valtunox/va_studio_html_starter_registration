@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration · VA Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="split">
+      <!-- Left: brand panel -->
+      <aside class="brand-panel">
+        <div class="brand-content">
+          <div class="logo-circle">VA</div>
+          <h1>Create your account</h1>
+          <p class="muted">Join thousands of teams building faster with VA Studio.</p>
+          <ul class="perks">
+            <li>✓ Free plan available</li>
+            <li>✓ No credit card required</li>
+            <li>✓ Setup in under 2 minutes</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Right: form -->
+      <div class="form-panel">
+        <form class="reg-form" onsubmit="event.preventDefault(); document.querySelector('.success').style.display='flex'; this.style.display='none'">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Doe" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="john@company.com" required />
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="Min. 8 characters" required minlength="8" />
+          </div>
+
+          <div class="form-group">
+            <label>Company <span class="optional">(optional)</span></label>
+            <input type="text" placeholder="Acme Inc." />
+          </div>
+
+          <div class="form-group">
+            <label>Role</label>
+            <select>
+              <option value="">Select your role…</option>
+              <option>Developer</option>
+              <option>Designer</option>
+              <option>Product Manager</option>
+              <option>Executive</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" required />
+            <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+          </label>
+
+          <button type="submit" class="btn-primary">Create Account</button>
+
+          <div class="divider"><span>or sign up with</span></div>
+
+          <div class="social-row">
+            <button type="button" class="btn-social">Google</button>
+            <button type="button" class="btn-social">GitHub</button>
+          </div>
+
+          <p class="muted center">Already have an account? <a href="#" class="link">Sign in</a></p>
+        </form>
+
+        <div class="success" style="display:none">
+          <div class="success-icon">✓</div>
+          <h2>Account Created!</h2>
+          <p class="muted">Check your inbox for a verification email.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer muted">
+      <p>Edit this registration form in VA Studio — preview updates live.</p>
+    </footer>
+  </main>
+</body>
+</html>
